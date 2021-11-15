@@ -1,0 +1,20 @@
+<div class="row">
+<div class="column">
+<h3>Laptop details:</h3>
+<table border='1px'>
+    <tr><td>Id</td><td>Name</td><td>Brand</td><td>Price</td><td>Ram</td></tr>
+{% for i in obj %}
+<tr><td>{{i.id}}</td><td>{{i.lname}}</td><td>{{i.brand}}</td><td>{{i.price}}</td><td>{{i.ram}}</td>
+    <td><a href="{% url 'updt' i.id %}"><button>Update</button></a></td>
+    <td><a href="{% url 'dlt' i.id %}"><button>Delete</button></a></td>
+</tr>
+{% endfor %}
+</table>
+</div>
+<div class="column">
+</div>
+<br>
+<div>
+   <a href="{% url 'add' %}"> <button>Add Laptop</button></a>
+</div>
+</div>
